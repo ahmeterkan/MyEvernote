@@ -56,6 +56,8 @@ namespace MyEvernote.BusinessLayer
 
                     //TODO : aktivasyon maili atılacak
                     //layerresult.Result.ActivateGuid
+
+
                 }
             }
             return layerresult;

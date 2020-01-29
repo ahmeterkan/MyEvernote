@@ -8,3 +8,14 @@ D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote.Common\bin\Debug\EntityFramework
 D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote.Common\bin\Debug\EntityFramework.xml
 D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote.Common\bin\Debug\EntityFramework.SqlServer.xml
 D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote.Common\obj\Debug\MyEvernote.Common.csproj.CopyComplete
+D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.Common\bin\Debug\MyEvernote.Common.dll.config
+D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.Common\bin\Debug\MyEvernote.Common.dll
+D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.Common\bin\Debug\MyEvernote.Common.pdb
+D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.Common\bin\Debug\EntityFramework.dll
+D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.Common\bin\Debug\EntityFramework.SqlServer.dll
+D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.Common\bin\Debug\EntityFramework.xml
+D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.Common\bin\Debug\EntityFramework.SqlServer.xml
+D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.Common\obj\Debug\MyEvernote.Common.csprojAssemblyReference.cache
+D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.Common\obj\Debug\MyEvernote.Common.csproj.CopyComplete
+D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.Common\obj\Debug\MyEvernote.Common.dll
+D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.Common\obj\Debug\MyEvernote.Common.pdb
