@@ -1,0 +1,11 @@
+D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote.Entities\bin\Debug\MyEvernote.Entities.dll.config
+D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote.Entities\bin\Debug\MyEvernote.Entities.dll
+D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote.Entities\bin\Debug\MyEvernote.Entities.pdb
+D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote.Entities\obj\Debug\MyEvernote.Entities.csprojAssemblyReference.cache
+D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote.Entities\obj\Debug\MyEvernote.Entities.dll
+D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote.Entities\obj\Debug\MyEvernote.Entities.pdb
+D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote.Entities\bin\Debug\EntityFramework.dll
+D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote.Entities\bin\Debug\EntityFramework.SqlServer.dll
+D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote.Entities\bin\Debug\EntityFramework.xml
+D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote.Entities\bin\Debug\EntityFramework.SqlServer.xml
+D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote.Entities\obj\Debug\MyEvernote.Entities.csproj.CopyComplete

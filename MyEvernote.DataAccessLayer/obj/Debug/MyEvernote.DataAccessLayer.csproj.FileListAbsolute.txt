@@ -1,0 +1,16 @@
+D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote.DataAccessLayer\bin\Debug\MyEvernote.DataAccessLayer.dll.config
+D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote.DataAccessLayer\bin\Debug\MyEvernote.DataAccessLayer.dll
+D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote.DataAccessLayer\bin\Debug\MyEvernote.DataAccessLayer.pdb
+D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote.DataAccessLayer\bin\Debug\EntityFramework.dll
+D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote.DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote.DataAccessLayer\bin\Debug\FakeData.dll
+D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote.DataAccessLayer\bin\Debug\MyEvernote.Entities.dll
+D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote.DataAccessLayer\bin\Debug\MyEvernote.Entities.pdb
+D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote.DataAccessLayer\bin\Debug\MyEvernote.Entities.dll.config
+D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote.DataAccessLayer\bin\Debug\EntityFramework.xml
+D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote.DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote.DataAccessLayer\bin\Debug\FakeData.pdb
+D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote.DataAccessLayer\obj\Debug\MyEvernote.DataAccessLayer.csprojAssemblyReference.cache
+D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote.DataAccessLayer\obj\Debug\MyEvernote.DataAccessLayer.csproj.CopyComplete
+D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote.DataAccessLayer\obj\Debug\MyEvernote.DataAccessLayer.dll
+D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote.DataAccessLayer\obj\Debug\MyEvernote.DataAccessLayer.pdb
