@@ -17,7 +17,7 @@ namespace MyEvernote.WepApp.Init
 
                 return user.Username;
             }
-            return null;
+            return "system";
         }
     }
 }

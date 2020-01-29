@@ -7,6 +7,7 @@ using System.Web.Mvc;
 using MyEvernote.Entities;
 using System.Net;
 using MyEvernote.Entities.ValueObject;
+using MyEvernote.Entities.Messages;
 
 namespace MyEvernote.WebApp.Controllers
 {
@@ -155,13 +156,39 @@ namespace MyEvernote.WebApp.Controllers
         }
 
 
-
-        public ActionResult UserActivate(Guid activate_id)
+        //Ok
+        public ActionResult UserActivate(Guid id)
         {
 
             //kullanıcı aktivasyonu sağlanacak
+            EvernoteUserManager eum = new EvernoteUserManager();
+            BusinessLayerResult<EvernoteUser> res = eum.ActivateUser(id);
+
+            if (res.Errors.Count > 0)
+            {
+                TempData["errors"] = res.Errors;
+                return RedirectToAction("UserActivateCancel");
+            }
+            
+            return RedirectToAction("UserActivateOk");
+        }
+        public ActionResult UserActivateOk()
+        {
             return View();
         }
+        public ActionResult UserActivateCancel()
+        {
+            List<ErrorMessageObj> errors = null;
+            if (TempData["errors"] != null)
+            {
+                errors = TempData["errors"] as List<ErrorMessageObj>;
+            }
+            return View(errors);
+        }
+
+
+
+        //Ok
         public ActionResult Logout()
         {
             Session.Clear();

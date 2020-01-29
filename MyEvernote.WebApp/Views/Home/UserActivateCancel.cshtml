@@ -1,6 +1,7 @@
-﻿
+﻿@using  MyEvernote.Entities.Messages
+@model List<ErrorMessageObj>
 @{
-    ViewBag.Title = "Kayıt Başarılı";
+    ViewBag.Title = "Hesap Geçersiz";
 }
 <link href="~/Content/login-register.css" rel="stylesheet" />
 
@@ -13,12 +14,16 @@
             </div>
             <div class="main-content">
 
-                <div class="text-success">
-                    <h2><span class="glyphicon glyphicon-ok"></span>&nbsp;&nbsp;&nbsp;Kayıt oldunuz..</h2>
+                <div class="text-danger">
+                    <h2><span class="glyphicon glyphicon-remove"></span>&nbsp;&nbsp;&nbsp;Hesap geçerli değil..</h2>
                     <hr />
                     <p class="text-justify">
-                        Lütfen e-posta adresinize gönderidiğimiz aktivasyon linkine tıklayarak hasabınızı aktive ediniz. 
-                        Hesabınızı aktive etmeden not ekleyemez ve beğenme yapamazsınız.
+                        
+                        @foreach (ErrorMessageObj error in Model)
+                        {
+                            @error.Message<br/>
+                        }
+
                     </p>
                 </div>
 
