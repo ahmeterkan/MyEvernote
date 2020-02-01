@@ -26,6 +26,9 @@ namespace MyEvernote.Entities
         [Required, StringLength(25)]
         public string Password { get; set; }
 
+        [StringLength(30)]
+        public string ProfileImageFilename { get; set; }
+
         public bool IsActive { get; set; }
         public bool IsAdmin { get; set; }
 

@@ -8,6 +8,10 @@
         UsernameOrPassWrong = 152,
         CheckYourEmail = 153,
         UserAlreadyActivate = 154,
-        ActivateIdDoesNotExists = 155
+        ActivateIdDoesNotExists = 155,
+        UserNotFound = 156,
+        ProfileCouldNotUpdated = 157,
+        UserCouldNotRemove = 158,
+        UserCouldNotFind = 159
     }
 }

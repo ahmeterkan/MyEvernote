@@ -104,6 +104,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Images\user.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
@@ -121,13 +122,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Init\WebCommon.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\ErrorViewModel.cs" />
+    <Compile Include="ViewModels\InfoViewModel.cs" />
+    <Compile Include="ViewModels\NotifyViewModelBase.cs" />
+    <Compile Include="ViewModels\OkViewModel.cs" />
+    <Compile Include="ViewModels\WarningViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -148,12 +153,15 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Home\Register.cshtml" />
-    <Content Include="Views\Home\RegisterOk.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\_PartialCategories.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Home\UserActivateOk.cshtml" />
-    <Content Include="Views\Home\UserActivateCancel.cshtml" />
+    <Content Include="Views\Home\ShowProfile.cshtml" />
+    <Content Include="Views\Home\EditProfile.cshtml" />
+    <Content Include="Views\Shared\Ok.cshtml" />
+    <Content Include="Views\Shared\Warning.cshtml" />
+    <Content Include="Views\Shared\Info.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -164,7 +172,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\Category\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MyEvernote.BusinessLayer\MyEvernote.BusinessLayer.csproj">
