@@ -57,8 +57,23 @@
                     @if (user != null)
                     {
 
-                        <li>
-                            <a href="#"><span class="glyphicon glyphicon-wrench"></span> Yönetim </a>
+                        <li class="dropdown">
+                            <a href="/Note/MyNotes" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <span class="glyphicon glyphicon-wrench"></span> Yönetim  <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/Note/AddNew"><span class="glyphicon glyphicon-plus"></span> Not Ekle</a> </li>
+                                <li role="separator" class="divider"> </li>
+                                <li><a href="/Note/MyNotes"><span class="glyphicon glyphicon-th-list"></span> Notlarım</a> </li>
+                                <li><a href="/Note/MyLikedNotes"><span class="glyphicon glyphicon-heart"></span> Begendiklerim</a> </li>
+
+                                @if (user.IsAdmin)
+                                {
+                                    <li role="separator" class="divider"> </li>
+                                    <li><a href="/Category/AddNew"><span class="glyphicon glyphicon-plus"></span> Kategori Ekle</a> </li>
+                                    <li><a href="/Category/List"><span class="glyphicon glyphicon-th-list"></span> Kategoriler</a> </li>
+                                }
+                            </ul>
                         </li>
 
                     }
@@ -88,11 +103,19 @@
                     }
                     else
                     {
-                        <li>
-                            <a href="/Home/ShowProfile">
-                                <span class="glyphicon glyphicon-user"></span>@user.Username
+
+                        <li class="dropdown">
+                            <a href="/Home/ShowProfile" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <span class="glyphicon glyphicon-user"></span> @user.Username <span class="caret"></span>
                             </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/Home/ShowProfile"><span class="glyphicon glyphicon-user"></span> Profili Göster</a> </li>
+                                <li role="separator" class="divider"> </li>
+                                <li><a href="/Home/EditProfile"><span class="glyphicon glyphicon-edit"></span> Profili Düzenle</a> </li>
+                                <li><a href="/Home/DeleteProfile" onclick="return confirm('Hesabınızı silmek istediğinize emin misiniz?');"><span class="glyphicon glyphicon-trash"></span> Profili Sil</a> </li>
+                            </ul>
                         </li>
+
                         <li>
                             <a href="/Home/Logout">
                                 <span class="glyphicon glyphicon-log-out"></span>Çıkış
@@ -108,72 +131,10 @@
     </nav>
 
     @RenderBody()
-    <!-- /.container -->
-
-    <div class="container">
-
-        <hr>
-
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-4 text-center">
-                    <h5>
-                        <strong>
-                            Site Haritası.
-                        </strong>
-                    </h5>
-                    <hr />
-                    <p>
-                        <a href="/Home/MostLiked"><span class="glyphicon glyphicon-star"></span> En Beğenilenler</a><br />
-                        <a href="/Home/Index"><span class="glyphicon glyphicon-th-list"></span> Son Yazılar</a><br />
-                        <a href="/Home/About"><span class="glyphicon glyphicon-info-sign"></span> Hakkımızda</a><br />
-                    </p>
-                </div>
-                <div class="col-lg-4 text-center">
-                    <h5>
-                        <strong>
-                            My Evernote
-                        </strong>
-                    </h5>
-                    <hr />
-                    <p>
-                        Tüm Hakları Saklıdır. &copy;<br />
-                        My Evernote @DateTime.Now.Year
-                    </p>
-                </div>
-                <div class="col-lg-4 text-center">
-                    <h5>
-                        <strong>
-                            E-Bülten Üyeliği
-                        </strong>
-                    </h5>
-                    <hr />
-                    <div class="col-md-10 col-lg-offset-1">
-                        <p>
-                            Sapien elit in malesuada semper mi, id sollicitudin urna fermentum.
-                        </p>
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="E-posta adresiniz" />
-                            <span class="input-group-btn">
-                                <button class="btn btn-primary" type="submit">
-                                    <span class="glyphicon glyphicon-send">
-                                        Gönder
-                                    </span>
-                                </button>
-                            </span>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </footer>
-
-    </div>
-    <!-- /.container -->
 
 
 
+    @RenderSection("footer", required: false)
 </body>
 
 </html>

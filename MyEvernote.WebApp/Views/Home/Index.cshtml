@@ -72,15 +72,15 @@
                                     @note.Owner.Username<span class="glyphicon glyphicon-user"> </span><br />
                                     @note.ModifiedOn.ToString("dd.MM.yy HH:mm")<span class="glyphicon glyphicon-time"> </span>
                                 </h6>
-                                    @if (string.IsNullOrEmpty(note.Text) == false && note.Text.Length > 65)
-                                    {
-                                       <p> @(note.Text.Substring(0, 65) + "...")</p>
-                                       <p class="pull-right"><a href="#" class="btn btn-default btn-sm">Devamı  <span class="glyphicon glyphicon-chevron-right"></span> </a></p>
-                                    }
-                                    else
-                                    {
-                                        <p>@(note.Text)</p>
-                                    }
+                                @if (string.IsNullOrEmpty(note.Text) == false && note.Text.Length > 65)
+                                {
+                                    <p> @(note.Text.Substring(0, 65) + "...")</p>
+                                    <p class="pull-right"><a href="#" class="btn btn-default btn-sm">Devamı  <span class="glyphicon glyphicon-chevron-right"></span> </a></p>
+                                }
+                                else
+                                {
+                                    <p>@(note.Text)</p>
+                                }
 
                             </div>
                             <div>
@@ -110,3 +110,7 @@
     </div>
 
 </div>
+
+@section footer{
+    @Html.Partial("_PartialFooter")
+}

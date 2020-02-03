@@ -102,6 +102,7 @@
     <Content Include="Content\login-register.css" />
     <Content Include="Content\shop-homepage.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="Content\validation-summary.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Images\user.png" />
@@ -122,6 +123,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -162,6 +164,12 @@
     <Content Include="Views\Shared\Warning.cshtml" />
     <Content Include="Views\Shared\Info.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_PartialFooter.cshtml" />
+    <Content Include="Views\Category\Create.cshtml" />
+    <Content Include="Views\Category\Delete.cshtml" />
+    <Content Include="Views\Category\Details.cshtml" />
+    <Content Include="Views\Category\Edit.cshtml" />
+    <Content Include="Views\Category\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -181,6 +189,10 @@
     <ProjectReference Include="..\MyEvernote.Common\MyEvernote.Common.csproj">
       <Project>{172a5c9a-f268-493a-a9dd-e826987b1f78}</Project>
       <Name>MyEvernote.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyEvernote.Core\MyEvernote.Core.csproj">
+      <Project>{6e890ab8-a3c5-464d-af06-931b64c4263b}</Project>
+      <Name>MyEvernote.Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\MyEvernote.Entities\MyEvernote.Entities.csproj">
       <Project>{133befe0-c478-4991-b7ba-2ee561d461ab}</Project>

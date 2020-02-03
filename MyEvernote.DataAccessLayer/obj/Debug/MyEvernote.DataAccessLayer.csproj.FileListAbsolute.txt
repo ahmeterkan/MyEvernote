@@ -33,3 +33,5 @@ D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.DataAccessLayer\obj\D
 D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.DataAccessLayer\obj\Debug\MyEvernote.DataAccessLayer.csproj.CopyComplete
 D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.DataAccessLayer\obj\Debug\MyEvernote.DataAccessLayer.dll
 D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.DataAccessLayer\obj\Debug\MyEvernote.DataAccessLayer.pdb
+D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.DataAccessLayer\bin\Debug\MyEvernote.Core.dll
+D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.DataAccessLayer\bin\Debug\MyEvernote.Core.pdb

@@ -39,3 +39,5 @@ D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.BusinessLayer\obj\Deb
 D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.BusinessLayer\obj\Debug\MyEvernote.BusinessLayer.csproj.CopyComplete
 D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.BusinessLayer\obj\Debug\MyEvernote.BusinessLayer.dll
 D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.BusinessLayer\obj\Debug\MyEvernote.BusinessLayer.pdb
+D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.BusinessLayer\bin\Debug\MyEvernote.Core.dll
+D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.BusinessLayer\bin\Debug\MyEvernote.Core.pdb
