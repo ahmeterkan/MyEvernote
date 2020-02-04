@@ -19,3 +19,4 @@ D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.Entities\bin\Debug\En
 D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.Entities\obj\Debug\MyEvernote.Entities.csproj.CopyComplete
 D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.Entities\obj\Debug\MyEvernote.Entities.dll
 D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.Entities\obj\Debug\MyEvernote.Entities.pdb
+D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.Entities\obj\Debug\MyEvernote.Entities.csprojAssemblyReference.cache
