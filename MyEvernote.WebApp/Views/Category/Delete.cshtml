@@ -61,13 +61,12 @@
         {
             @Html.AntiForgeryToken()
 
-            <div class="form-actions no-color">
-                <button type="submit" class="btn btn-danger">
-                    <span class="glyphicon glyphicon-remove"></span>
-                    Sil
-                </button>
-                @Html.ActionLink("Listeye Geri Dön", "Index", "Category", null, new { @class = "btn btn-default" })
-            </div>
+    <div class="form-actions no-color">
+        
+        @Bootstrap.Button("danger", string.Empty, "submit", "remove", " Sil")
+        @Bootstrap.linkButton("/Category/Index", "default", string.Empty, string.Empty, "arrow-left", " Listeye Geri Dön")
+
+    </div>
         }
     </div>
 </div>

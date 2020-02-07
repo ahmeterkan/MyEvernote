@@ -12,6 +12,8 @@
         UserNotFound = 156,
         ProfileCouldNotUpdated = 157,
         UserCouldNotRemove = 158,
-        UserCouldNotFind = 159
+        UserCouldNotFind = 159,
+        UserCouldNotInserted = 160,
+        UserCouldNotUpdated = 161
     }
 }

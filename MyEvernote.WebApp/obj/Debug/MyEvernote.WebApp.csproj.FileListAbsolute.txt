@@ -145,6 +145,7 @@ D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.WebApp\bin\Microsoft.
 D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.WebApp\bin\Microsoft.Web.Infrastructure.dll
 D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.WebApp\bin\MyEvernote.BusinessLayer.dll
 D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.WebApp\bin\MyEvernote.Common.dll
+D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.WebApp\bin\MyEvernote.Core.dll
 D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.WebApp\bin\MyEvernote.Entities.dll
 D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.WebApp\bin\System.Web.Helpers.dll
 D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.WebApp\bin\System.Web.Mvc.dll
@@ -158,6 +159,7 @@ D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.WebApp\bin\MyEvernote
 D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.WebApp\bin\MyEvernote.BusinessLayer.dll.config
 D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.WebApp\bin\MyEvernote.Common.pdb
 D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.WebApp\bin\MyEvernote.Common.dll.config
+D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.WebApp\bin\MyEvernote.Core.pdb
 D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.WebApp\bin\MyEvernote.Entities.pdb
 D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.WebApp\bin\MyEvernote.Entities.dll.config
 D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.WebApp\bin\EntityFramework.xml
@@ -176,5 +178,3 @@ D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.WebApp\obj\Debug\MyEv
 D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.WebApp\obj\Debug\MyEvernote.WebApp.csproj.CopyComplete
 D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.WebApp\obj\Debug\MyEvernote.WebApp.dll
 D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.WebApp\obj\Debug\MyEvernote.WebApp.pdb
-D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.WebApp\bin\MyEvernote.Core.dll
-D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.WebApp\bin\MyEvernote.Core.pdb

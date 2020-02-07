@@ -15,7 +15,7 @@ D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.Common\bin\Debug\Enti
 D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.Common\bin\Debug\EntityFramework.SqlServer.dll
 D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.Common\bin\Debug\EntityFramework.xml
 D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.Common\bin\Debug\EntityFramework.SqlServer.xml
+D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.Common\obj\Debug\MyEvernote.Common.csprojAssemblyReference.cache
 D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.Common\obj\Debug\MyEvernote.Common.csproj.CopyComplete
 D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.Common\obj\Debug\MyEvernote.Common.dll
 D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.Common\obj\Debug\MyEvernote.Common.pdb
-D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.Common\obj\Debug\MyEvernote.Common.csprojAssemblyReference.cache

@@ -56,12 +56,10 @@
         </dl>
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
-                <a href="/Category/Edit/@Model.Id" class="btn btn-warning">
-                    <span class="glyphicon glyphicon-edit"></span> Düzenle
-                </a>
-                <a href="/Category/Index" class="btn btn-default">
-                    <span class="glyphicon glyphicon-arrow-left"></span> Listeye Geri Dön
-                </a>
+                
+                @Bootstrap.linkButton("/Category/Edit/" + Model.Id, "warning", string.Empty, string.Empty, "edit", " Düzenle")
+                @Bootstrap.linkButton("/Category/Index", "default", string.Empty, string.Empty, "arrow-left", " Listeye Geri Dön")
+
             </div>
         </div>
     </div>

@@ -22,10 +22,14 @@ D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.BusinessLayer\bin\Deb
 D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.BusinessLayer\bin\Debug\MyEvernote.BusinessLayer.pdb
 D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.BusinessLayer\bin\Debug\EntityFramework.dll
 D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.BusinessLayer\bin\Debug\EntityFramework.SqlServer.dll
+D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.BusinessLayer\bin\Debug\MyEvernote.Common.dll
+D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.BusinessLayer\bin\Debug\MyEvernote.Core.dll
 D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.BusinessLayer\bin\Debug\MyEvernote.DataAccessLayer.dll
 D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.BusinessLayer\bin\Debug\MyEvernote.Entities.dll
 D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.BusinessLayer\bin\Debug\FakeData.dll
-D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.BusinessLayer\bin\Debug\MyEvernote.Common.dll
+D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.BusinessLayer\bin\Debug\MyEvernote.Common.pdb
+D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.BusinessLayer\bin\Debug\MyEvernote.Common.dll.config
+D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.BusinessLayer\bin\Debug\MyEvernote.Core.pdb
 D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.BusinessLayer\bin\Debug\MyEvernote.DataAccessLayer.pdb
 D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.BusinessLayer\bin\Debug\MyEvernote.DataAccessLayer.dll.config
 D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.BusinessLayer\bin\Debug\MyEvernote.Entities.pdb
@@ -33,11 +37,7 @@ D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.BusinessLayer\bin\Deb
 D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.BusinessLayer\bin\Debug\EntityFramework.xml
 D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.BusinessLayer\bin\Debug\EntityFramework.SqlServer.xml
 D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.BusinessLayer\bin\Debug\FakeData.pdb
-D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.BusinessLayer\bin\Debug\MyEvernote.Common.pdb
-D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.BusinessLayer\bin\Debug\MyEvernote.Common.dll.config
 D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.BusinessLayer\obj\Debug\MyEvernote.BusinessLayer.csprojAssemblyReference.cache
 D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.BusinessLayer\obj\Debug\MyEvernote.BusinessLayer.csproj.CopyComplete
 D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.BusinessLayer\obj\Debug\MyEvernote.BusinessLayer.dll
 D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.BusinessLayer\obj\Debug\MyEvernote.BusinessLayer.pdb
-D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.BusinessLayer\bin\Debug\MyEvernote.Core.dll
-D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.BusinessLayer\bin\Debug\MyEvernote.Core.pdb

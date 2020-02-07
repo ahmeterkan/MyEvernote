@@ -1,4 +1,5 @@
-﻿@model MyEvernote.Entities.Category
+﻿@using MyEvernote.WebApp
+@model MyEvernote.Entities.Category
 
 @{
     ViewBag.Title = "Ekle";
@@ -37,11 +38,10 @@
 
                 <div class="form-group">
                     <div class="col-md-offset-2 col-md-10">
-                        <button type="submit" class="btn btn-success">
-                            <span class="glyphicon glyphicon-plus"></span>
-                            Ekle
-                        </button>
-                        @Html.ActionLink("Listeye Geri Dön", "Index", "Category", null, new { @class = "btn btn-default" })
+                        
+                        @Bootstrap.Button("success", string.Empty, "submit", "plus", " Ekle")
+                        @Bootstrap.linkButton("/Category/Index", "default", string.Empty, string.Empty, "arrow-left", " Listeye Geri Dön")
+
                     </div>
                 </div>
             </div>

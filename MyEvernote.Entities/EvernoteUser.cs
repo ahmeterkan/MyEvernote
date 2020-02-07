@@ -27,14 +27,17 @@ namespace MyEvernote.Entities
         [Required(ErrorMessage = "{0} alanı gereklidir."), StringLength(25, ErrorMessage = "{0} alanı max. {1} karakte olmalıdır."), DisplayName("Şifre")]
         public string Password { get; set; }
 
-        [StringLength(30)]
+        [StringLength(30), ScaffoldColumn(false)]
         public string ProfileImageFilename { get; set; }
 
+        [DisplayName("Is Active")]
         public bool IsActive { get; set; }
+
+        [DisplayName("Is Admin")]
         public bool IsAdmin { get; set; }
 
 
-        [Required]
+        [Required, ScaffoldColumn(false)]
         public Guid ActivateGuid { get; set; }
 
 

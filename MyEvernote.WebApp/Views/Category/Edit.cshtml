@@ -41,11 +41,10 @@
 
                 <div class="form-group">
                     <div class="col-md-offset-2 col-md-10">
-                        <button type="submit" class="btn btn-success">
-                            <span class="glyphicon glyphicon-floppy-saved"></span>
-                            Kaydet
-                        </button>
-                        @Html.ActionLink("Listeye Geri Dön", "Index", "Category", null, new { @class = "btn btn-default" })
+                        
+                        @Bootstrap.Button("success", string.Empty, "submit", "floppy-saved", " Kaydet")
+                        @Bootstrap.linkButton("/Category/Index", "default", string.Empty, string.Empty, "arrow-left", " Listeye Geri Dön")
+
                     </div>
                 </div>
             </div>
