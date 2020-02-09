@@ -62,9 +62,9 @@
                                 <span class="glyphicon glyphicon-wrench"></span> Yönetim  <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu">
-                                <li> @Bootstrap.LinkMenu("/Note/AddNew", "plus", " Not Ekle") </li>
+                                <li> @Bootstrap.LinkMenu("/Note/Create", "plus", " Not Ekle") </li>
                                 <li role="separator" class="divider"> </li>
-                                <li> @Bootstrap.LinkMenu("/Note/MyNotes", "th-list", " Notlarım") </li>
+                                <li> @Bootstrap.LinkMenu("/Note/Index", "th-list", " Notlarım") </li>
                                 <li> @Bootstrap.LinkMenu("/Note/MyLikedNotes", "heart", " Begendiklerim")</li>
 
                                 @if (user.IsAdmin)
