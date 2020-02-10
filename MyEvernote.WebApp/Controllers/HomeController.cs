@@ -10,6 +10,7 @@ using MyEvernote.Entities.ValueObject;
 using MyEvernote.Entities.Messages;
 using MyEvernote.WebApp.ViewModels;
 using MyEvernote.BusinessLayer.Results;
+using MyEvernote.WebApp.Models;
 
 namespace MyEvernote.WebApp.Controllers
 {
@@ -34,7 +35,7 @@ namespace MyEvernote.WebApp.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            
+
             Category cat = categoryManager.Find(x => x.Id == id.Value);
             if (cat == null)
             {
@@ -58,9 +59,8 @@ namespace MyEvernote.WebApp.Controllers
         //Ok
         public ActionResult ShowProfile()
         {
-            EvernoteUser currentUser = Session["login"] as EvernoteUser;
 
-            BusinessLayerResult<EvernoteUser> res = evernoteUserManager.GetUserById(currentUser.Id);
+            BusinessLayerResult<EvernoteUser> res = evernoteUserManager.GetUserById(CurrentSession.User.Id);
             if (res.Errors.Count > 0)
             {
                 ErrorViewModel errorNotfyObj = new ErrorViewModel()
@@ -75,9 +75,8 @@ namespace MyEvernote.WebApp.Controllers
         //Ok
         public ActionResult EditProfile()
         {
-            EvernoteUser currentUser = Session["login"] as EvernoteUser;
 
-            BusinessLayerResult<EvernoteUser> res = evernoteUserManager.GetUserById(currentUser.Id);
+            BusinessLayerResult<EvernoteUser> res = evernoteUserManager.GetUserById(CurrentSession.User.Id);
             if (res.Errors.Count > 0)
             {
                 ErrorViewModel errorNotifyObj = new ErrorViewModel()
@@ -115,7 +114,7 @@ namespace MyEvernote.WebApp.Controllers
                     };
                     return View("Error", errorNotifyOBj);
                 }
-                Session["login"] = res.Result;// Profile güncellendiği için session güncellendi.
+                CurrentSession.Set<EvernoteUser>("login", res.Result);// Profile güncellendiği için session güncellendi.
                 return RedirectToAction("ShowProfile");
             }
             return View(model);
@@ -124,8 +123,7 @@ namespace MyEvernote.WebApp.Controllers
         //Ok
         public ActionResult DeleteProfile()
         {
-            EvernoteUser currentuser = Session["login"] as EvernoteUser;
-            BusinessLayerResult<EvernoteUser> res = evernoteUserManager.RemoveUserById(currentuser.Id);
+            BusinessLayerResult<EvernoteUser> res = evernoteUserManager.RemoveUserById(CurrentSession.User.Id);
             if (res.Errors.Count > 0)
             {
                 ErrorViewModel errorNotifyObj = new ErrorViewModel()
@@ -164,7 +162,7 @@ namespace MyEvernote.WebApp.Controllers
                     //sessiona kullnaıcı bilgi saklama
                     //yönlendirme..
 
-                    Session["login"] = res.Result;
+                    CurrentSession.Set<EvernoteUser>("login", res.Result);
                     return RedirectToAction("Index");
                 }
             }

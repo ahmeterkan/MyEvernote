@@ -50,7 +50,7 @@ namespace MyEvernote.WebApp.Controllers
 
         public ActionResult Create()
         {
-            ViewBag.CategoryId = new SelectList(categoryManager.List(), "Id", "Title");
+            ViewBag.CategoryId = new SelectList(CacheHelper.GetCategoriesFromCache(), "Id", "Title");
             return View();
         }
 
@@ -69,7 +69,7 @@ namespace MyEvernote.WebApp.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.CategoryId = new SelectList(categoryManager.List(), "Id", "Title", note.CategoryId);
+            ViewBag.CategoryId = new SelectList(CacheHelper.GetCategoriesFromCache(), "Id", "Title", note.CategoryId);
             return View(note);
         }
 
@@ -84,7 +84,7 @@ namespace MyEvernote.WebApp.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.CategoryId = new SelectList(categoryManager.List(), "Id", "Title", note.CategoryId);
+            ViewBag.CategoryId = new SelectList(CacheHelper.GetCategoriesFromCache(), "Id", "Title", note.CategoryId);
             return View(note);
         }
 
@@ -107,7 +107,7 @@ namespace MyEvernote.WebApp.Controllers
 
                 return RedirectToAction("Index");
             }
-            ViewBag.CategoryId = new SelectList(categoryManager.List(), "Id", "Title", note.CategoryId);
+            ViewBag.CategoryId = new SelectList(CacheHelper.GetCategoriesFromCache(), "Id", "Title", note.CategoryId);
             return View(note);
         }
 
@@ -134,5 +134,20 @@ namespace MyEvernote.WebApp.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult MoreNote(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Note note = noteManager.Find(x => x.Id == id);
+
+            if (note == null)
+            {
+                return HttpNotFound();
+            }
+
+            return PartialView("_PartialNote", note);
+        }
     }
 }

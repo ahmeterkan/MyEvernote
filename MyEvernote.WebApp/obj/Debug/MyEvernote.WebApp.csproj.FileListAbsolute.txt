@@ -178,3 +178,8 @@ D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.WebApp\obj\Debug\MyEv
 D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.WebApp\obj\Debug\MyEvernote.WebApp.csproj.CopyComplete
 D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.WebApp\obj\Debug\MyEvernote.WebApp.dll
 D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.WebApp\obj\Debug\MyEvernote.WebApp.pdb
+D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.WebApp\bin\Microsoft.Web.Helpers.dll
+D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.WebApp\bin\WebMatrix.Data.dll
+D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.WebApp\bin\WebMatrix.WebData.dll
+D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.WebApp\bin\WebMatrix.Data.xml
+D:\aspnetMVCudemy\MyEvernoteSolution\MyEvernote\MyEvernote.WebApp\bin\WebMatrix.WebData.xml

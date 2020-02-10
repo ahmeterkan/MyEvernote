@@ -75,7 +75,12 @@
                                 @if (string.IsNullOrEmpty(note.Text) == false && note.Text.Length > 65)
                                 {
                                     <p> @(note.Text.Substring(0, 65) + "...")</p>
-                                    <p class="pull-right"><a href="#" class="btn btn-default btn-sm">Devamı  <span class="glyphicon glyphicon-chevron-right"></span> </a></p>
+                                    <p class="pull-right">
+                                        <button class="btn btn-default btn-sm" data-toggle="modal" data-target="#modal_note" data-note-id="@note.Id">
+                                            Devamı
+                                            <span class="glyphicon glyphicon-chevron-right"></span>
+                                        </button>
+                                    </p>
                                 }
                                 else
                                 {
@@ -88,7 +93,7 @@
                             </div>
                             <div class="ratings">
                                 <p class="pull-right">
-                                    <button class="btn btn-default btn-sm">
+                                    <button class="btn btn-default btn-sm" data-toggle="modal" data-target="#modal_comment" data-note-id="@note.Id">
                                         <span class="glyphicon glyphicon-comment"></span> Yorumlar
                                     </button>
                                 </p>
@@ -114,3 +119,39 @@
 @section footer{
     @Html.Partial("_PartialFooter")
 }
+@Bootstrap.ModalPopup(id: "modal_comment", title: "Yorumlar")
+@Bootstrap.ModalPopup(id: "modal_note", title: "Daha Fazla")
+
+<script>
+    $(function () {
+        $('#modal_comment').on('show.bs.modal', function (e) {
+            var btn = $(e.relatedTarget);
+            var noteid = btn.data("note-id");
+
+            $("#modal_comment_body").load("/Comment/ShowNoteComments/" + noteid);
+        })
+    });
+
+</script><script>
+    $(function () {
+        $('#modal_note').on('show.bs.modal', function (e) {
+            var btn = $(e.relatedTarget);
+            var noteid = btn.data("note-id");
+
+            $("#modal_note_body").load("/Note/MoreNote/" + noteid);
+        })
+    });
+
+</script>
+@*<script>
+
+    $(function () {
+        $('#modal_note').on('show.bs.modal', function (e) {
+            console.log("test");
+            var btn = $(e.relatedTarget);
+            var noteid = btn.data("note-id");
+
+            $("#modal_comment_body").load("/Note/MoreNote/" + noteid);
+        })
+    });
+</script>*@
