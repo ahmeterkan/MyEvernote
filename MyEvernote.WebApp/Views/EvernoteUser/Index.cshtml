@@ -82,13 +82,11 @@
                     <td>
                         @Html.DisplayFor(modelItem => item.ModifiedUserName)
                     </td>
-                    <td>
+                    <td width="100px">
                         @Bootstrap.linkButton("/EvernoteUser/Edit/" + @item.Id, "warning", "btn-xs", "Düzenle", "edit", string.Empty)
-                    </td>
-                    <td>
+                    
                         @Bootstrap.linkButton("/EvernoteUser/Details/" + @item.Id, "info", "btn-xs", "Detaylar", "search", string.Empty)
-                    </td>
-                    <td>
+                    
                         @Bootstrap.linkButton("/EvernoteUser/Delete/" + @item.Id, "danger", "btn-xs", "Sil", "trash", string.Empty)
                     </td>
                 </tr>

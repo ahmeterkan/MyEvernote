@@ -59,7 +59,7 @@
                 @foreach (Note note in Model)
                 {
                     @*Kutular*@
-                    <div class="col-sm-4 col-lg-4 col-md-4">
+                    <div class="col-sm-4 col-lg-4 col-md-4" data-note-id="@note.Id">
                         <div class="thumbnail">
                             <img src="http://placehold.it/320x150" alt="@note.Title">
                             <div class="caption">
@@ -98,8 +98,8 @@
                                     </button>
                                 </p>
                                 <p>
-                                    <button class="btn btn-default btn-sm" type="button">
-                                        <span class="glyphicon glyphicon-star-empty"></span> @note.LikeCount
+                                    <button class="btn btn-default btn-sm" type="button" data-liked="false" data-note-id="@note.Id">
+                                        <span class="glyphicon glyphicon-star-empty"></span> &nbsp;<span class="like-count">@note.LikeCount</span>
                                     </button>
                                 </p>
                             </div>
@@ -122,36 +122,42 @@
 @Bootstrap.ModalPopup(id: "modal_comment", title: "Yorumlar")
 @Bootstrap.ModalPopup(id: "modal_note", title: "Daha Fazla")
 
+
+<script src="~/Scripts/comment.js"></script>
+<script src="~/Scripts/jquery-3.1.1.js"></script>
 <script>
-    $(function () {
-        $('#modal_comment').on('show.bs.modal', function (e) {
-            var btn = $(e.relatedTarget);
-            var noteid = btn.data("note-id");
 
-            $("#modal_comment_body").load("/Comment/ShowNoteComments/" + noteid);
-        })
+    $(function () {
+
+        var noteids = [];
+
+        $("div[data-note-id]").each(function (i, e) {
+            noteids.push($(e).data("note-id"));
+        });
+        console.log(noteids);
+        $.ajax({
+            method: "POST",
+            url: "/Note/GetLiked",
+            data: { ids: noteids }
+        }).done(function (data) {
+            if (data.result != null && data.result.length > 0) {
+                for (var i = 0; i < data.result.length; i++) {
+                    var id = data.result[i];
+                    var likedNote = $("div[data-noe-id=" + id + "]");
+                    var btn = likedNote.find("button[data-liked]");
+                    var span = btn.children().first();
+
+                    console.log("test");
+
+                    btn.data("liked", true);
+                    span.removeClass("glyphicon-star-empty");
+                    span.addClass("glyphicon-star");
+                }
+            }
+        }).fail(function () {
+        });
     });
 
-</script><script>
-    $(function () {
-        $('#modal_note').on('show.bs.modal', function (e) {
-            var btn = $(e.relatedTarget);
-            var noteid = btn.data("note-id");
 
-            $("#modal_note_body").load("/Note/MoreNote/" + noteid);
-        })
-    });
 
 </script>
-@*<script>
-
-    $(function () {
-        $('#modal_note').on('show.bs.modal', function (e) {
-            console.log("test");
-            var btn = $(e.relatedTarget);
-            var noteid = btn.data("note-id");
-
-            $("#modal_comment_body").load("/Note/MoreNote/" + noteid);
-        })
-    });
-</script>*@

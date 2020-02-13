@@ -149,5 +149,14 @@ namespace MyEvernote.WebApp.Controllers
 
             return PartialView("_PartialNote", note);
         }
+
+        public ActionResult GetLiked(int[] ids)
+        {
+            List<int> likedNoteIds = likedManager.List(
+                x => x.LikedUser.Id == CurrentSession.User.Id && ids.Contains(x.Note.Id)).Select(
+                x => x.Note.Id).ToList();
+
+            return Json(new { result = likedNoteIds });
+        }
     }
 }

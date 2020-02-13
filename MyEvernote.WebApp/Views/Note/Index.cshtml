@@ -71,13 +71,15 @@
                     <td>
                         @Html.DisplayFor(modelItem => item.ModifiedUserName)
                     </td>
-                    <td>
+                    <td width="150px">
+                        <button type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#modal_comment" data-note-id="@item.Id">
+                            <span class="glyphicon glyphicon-comment"></span>
+                        </button>
+                   
                         @Bootstrap.linkButton("/Note/Edit/" + @item.Id, "warning", "btn-xs", "Düzenle", "edit", string.Empty)
-                    </td>
-                    <td>
+                   
                         @Bootstrap.linkButton("/Note/Details/" + @item.Id, "info", "btn-xs", "Detaylar", "search", string.Empty)
-                    </td>
-                    <td>
+                 
                         @Bootstrap.linkButton("/Note/Delete/" + @item.Id, "danger", "btn-xs", "Sil", "trash", string.Empty)
                     </td>
                 </tr>
@@ -87,3 +89,6 @@
 
     </div>
 </div>
+@Bootstrap.ModalPopup(id: "modal_comment", title: "Yorumlar")
+
+<script src="~/Scripts/comment.js"></script>
