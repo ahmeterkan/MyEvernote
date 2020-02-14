@@ -8,15 +8,19 @@ using System.Web;
 using System.Web.Mvc;
 using MyEvernote.BusinessLayer;
 using MyEvernote.Entities;
+using MyEvernote.WebApp.Filters;
 using MyEvernote.WebApp.Models;
 
 namespace MyEvernote.WebApp.Controllers
 {
+    [Exc]
     public class NoteController : Controller
     {
         NoteManager noteManager = new NoteManager();
         CategoryManager categoryManager = new CategoryManager();
         LikedManager likedManager = new LikedManager();
+
+        [Auth]
         public ActionResult Index()
         {
             var notes = noteManager.ListQueryable().Include("Category").Include("Owner").Where(
@@ -25,6 +29,7 @@ namespace MyEvernote.WebApp.Controllers
             return View(notes.ToList());
         }
 
+        [Auth]
         public ActionResult MyLikedNotes()
         {
             var notes = likedManager.ListQueryable().Include("LikedUser").Include("Note").Where(
@@ -34,6 +39,8 @@ namespace MyEvernote.WebApp.Controllers
 
             return View("Index", notes.ToList());
         }
+
+        [Auth]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -48,12 +55,14 @@ namespace MyEvernote.WebApp.Controllers
             return View(note);
         }
 
+        [Auth]
         public ActionResult Create()
         {
             ViewBag.CategoryId = new SelectList(CacheHelper.GetCategoriesFromCache(), "Id", "Title");
             return View();
         }
 
+        [Auth]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(Note note)
@@ -73,6 +82,7 @@ namespace MyEvernote.WebApp.Controllers
             return View(note);
         }
 
+        [Auth]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -88,6 +98,7 @@ namespace MyEvernote.WebApp.Controllers
             return View(note);
         }
 
+        [Auth]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(Note note)
@@ -111,6 +122,7 @@ namespace MyEvernote.WebApp.Controllers
             return View(note);
         }
 
+        [Auth]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -125,6 +137,7 @@ namespace MyEvernote.WebApp.Controllers
             return View(note);
         }
 
+        [Auth]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
@@ -134,7 +147,7 @@ namespace MyEvernote.WebApp.Controllers
             return RedirectToAction("Index");
         }
 
-        public ActionResult MoreNote(int? id)
+        public ActionResult GetNoteText(int? id)
         {
             if (id == null)
             {
@@ -147,16 +160,66 @@ namespace MyEvernote.WebApp.Controllers
                 return HttpNotFound();
             }
 
-            return PartialView("_PartialNote", note);
+            return PartialView("_PartialNoteText", note);
         }
 
+        [Auth]
+        [HttpPost]
         public ActionResult GetLiked(int[] ids)
         {
-            List<int> likedNoteIds = likedManager.List(
+            if (CurrentSession.User != null)
+            {
+                List<int> likedNoteIds = likedManager.List(
                 x => x.LikedUser.Id == CurrentSession.User.Id && ids.Contains(x.Note.Id)).Select(
                 x => x.Note.Id).ToList();
 
-            return Json(new { result = likedNoteIds });
+                return Json(new { result = likedNoteIds });
+            }
+            else
+            {
+                return Json(new { result = new List<int>() });
+            }
+        }
+
+        [Auth]
+        [HttpPost]
+        public ActionResult SetLikeState(int noteid, bool liked)
+        {
+            int res = 0;
+            Liked like = likedManager.Find(x => x.Note.Id == noteid && x.LikedUser.Id == CurrentSession.User.Id);
+            Note note = noteManager.Find(x => x.Id == noteid);
+
+            if (like != null && liked == false)
+            {
+                res = likedManager.Delete(like);
+            }
+            else if (like == null && liked == true)
+            {
+                res = likedManager.Insert(new Liked()
+                {
+                    LikedUser = CurrentSession.User,
+                    Note = note
+                });
+            }
+
+            if (res > 0)
+            {
+                if (liked)
+                {
+                    note.LikeCount++;
+                }
+                else
+                {
+                    note.LikeCount--;
+                }
+
+                noteManager.Update(note);
+
+                return Json(new { hasError = false, errorMessage = string.Empty, result = note.LikeCount });
+
+            }
+
+            return Json(new { hasError = true, errorMessage = "Beğenme işlemi gerçekleştirlemedi.", result = note.LikeCount });
         }
     }
 }

@@ -11,9 +11,11 @@ using MyEvernote.Entities.Messages;
 using MyEvernote.WebApp.ViewModels;
 using MyEvernote.BusinessLayer.Results;
 using MyEvernote.WebApp.Models;
+using MyEvernote.WebApp.Filters;
 
 namespace MyEvernote.WebApp.Controllers
 {
+    [Exc]
     public class HomeController : Controller
     {
         private NoteManager noteManager = new NoteManager();
@@ -24,8 +26,7 @@ namespace MyEvernote.WebApp.Controllers
         //  Ok
         public ActionResult Index()
         {
-
-            return View(noteManager.ListQueryable().OrderByDescending(x => x.ModifiedOn).ToList());
+            return View(noteManager.ListQueryable().Where(x => x.IsDraft == false).OrderByDescending(x => x.ModifiedOn).ToList());
         }
 
         // Ok
@@ -36,12 +37,9 @@ namespace MyEvernote.WebApp.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
-            Category cat = categoryManager.Find(x => x.Id == id.Value);
-            if (cat == null)
-            {
-                return HttpNotFound();
-            }
-            return View("Index", cat.Notes.OrderByDescending(x => x.ModifiedOn).ToList());
+
+            List<Note> notes = noteManager.ListQueryable().Where(x => x.IsDraft == false && x.CategoryId == id).OrderByDescending(x => x.ModifiedOn).ToList();
+            return View("Index", notes);
         }
 
         //Ok
@@ -57,6 +55,7 @@ namespace MyEvernote.WebApp.Controllers
         }
 
         //Ok
+        [Auth]
         public ActionResult ShowProfile()
         {
 
@@ -73,6 +72,7 @@ namespace MyEvernote.WebApp.Controllers
             return View(res.Result);
         }
         //Ok
+        [Auth]
         public ActionResult EditProfile()
         {
 
@@ -88,6 +88,7 @@ namespace MyEvernote.WebApp.Controllers
             }
             return View(res.Result);
         }
+        [Auth]
         [HttpPost]
         public ActionResult EditProfile(EvernoteUser model, HttpPostedFileBase ProfileImage)
         {
@@ -121,6 +122,7 @@ namespace MyEvernote.WebApp.Controllers
         }
 
         //Ok
+        [Auth]
         public ActionResult DeleteProfile()
         {
             BusinessLayerResult<EvernoteUser> res = evernoteUserManager.RemoveUserById(CurrentSession.User.Id);
@@ -236,6 +238,16 @@ namespace MyEvernote.WebApp.Controllers
         {
             Session.Clear();
             return RedirectToAction("Index");
+        }
+
+        public ActionResult AccessDenied()
+        {
+            return View();
+        }
+
+        public ActionResult HasError()
+        {
+            return View();
         }
     }
 }
